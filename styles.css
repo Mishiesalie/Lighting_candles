@@ -132,7 +132,7 @@
 .candle-group {
     display: flex;
     align-items: flex-end;
-    gap: 30px;
+    gap: 25px;
 }
 
 .candle-container {
@@ -193,15 +193,15 @@
 
 /* Add slight rotation to candles for natural look */
 .tall {
-    transform: rotate(-2deg);
+    transform: rotate(2deg);
 }
 
 .medium {
-    transform: rotate(1deg);
+    transform: rotate(-1deg);
 }
 
 .short {
-    transform: rotate(-1deg);
+    transform: rotate(1.5deg);
 }
 
 /* Adjust animation timing for each candle */
@@ -215,4 +215,63 @@
 
 .short .flame {
     animation: flicker 2.8s infinite;
+}
+
+/* Extra tall candle */
+.extra-tall .candle {
+    height: 200px;
+    width: 48px;
+}
+
+.extra-tall .candle::after {
+    width: 58px;
+    left: -5px;
+}
+
+.extra-tall .flame {
+    width: 20px;
+    height: 45px;
+}
+
+.extra-tall .flame-wrapper {
+    transform: translate(-50%, -50%) translateY(-120px);
+}
+
+/* Extra short candle */
+.extra-short .candle {
+    height: 60px;
+    width: 30px;
+}
+
+.extra-short .candle::after {
+    width: 40px;
+    height: 7px;
+    left: -5px;
+}
+
+.extra-short .flame {
+    width: 11px;
+    height: 25px;
+}
+
+.extra-short .flame-wrapper {
+    transform: translate(-50%, -50%) translateY(-45px);
+}
+
+/* Update rotations for natural look */
+.extra-tall {
+    transform: rotate(-1.5deg);
+}
+
+.extra-short {
+    transform: rotate(-0.5deg);
+}
+
+/* Adjust animation timing */
+.extra-tall .flame {
+    animation: flicker 3.7s infinite;
+}
+
+.extra-short .flame {
+    animation: flicker 2.5s infinite;
 } 
